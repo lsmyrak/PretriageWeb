@@ -1,0 +1,74 @@
+﻿@model PretriageWeb.ViewModel.PretriageListViewModel
+    <div class="Finder">
+        <center>
+            <h2> Wyszukiwanie : </h2>
+            <h3>po dacie , numerze pesel, numerze innego dokumentu, i miejscu </h3>
+        </center>
+        <form asp-action="Index" method="post">
+
+            <div class="Menupoz1">
+                <label>
+                    Data Od:
+                    <input type="date" name="startDate" id="StartDate" class="form-control" />
+                </label>
+                <label>
+                    Data Do :
+                    <input type="date" name="StopDate" id="StopDate" class="form-control" />
+                </label>
+            </div>
+            <div class="Menupoz2">
+                <label>
+                    Pesel lub numer dokumentu:
+                    <input type="text" name="NumberSeriaPesel" id="NumberSeriaPesel" class="form-control" />
+                </label>
+                <label>
+                    Miejsce :
+                    <input type="text" name="Miejsce" id="Miejsce" class="form-control" />
+                </label>
+
+                <input type="submit" value="Szukaj" class="btn btn-primary" />
+                <br>
+            </div>
+            <br />
+        </form>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+
+                <th scope="col">Pesel</th>
+                <th scope="col">Inny Dokument Tosamości</th>
+                <th scope="col">Numer lub Seria</th>
+                <th scope="col">Kod Produktu</th>
+                <th scope="col">Nazwa Produktu</th>
+                <th scope="col">Data Od</th>
+                <th scope="col">Data Do</th>
+                <th scope="col">Liczba Jednostek Rozliczeniowych</th>
+                <th scope="col">Wartość jednostki rozliczeniowej</th>
+                <th scope="col">Wartość</th>
+                <th scope="col">Miejsce</th>
+                <th scope="col">Edycja</th>
+                <th scope="col">Usuń</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.PretriageLists)
+            {
+                <tr>
+                    <td>@item.Pesel</td>
+                    <td>@item.InnyDokument</td>
+                    <td>@item.NumerSeria</td>
+                    <td>@item.Kod_Produktu</td>
+                    <td>@item.Nazwa_Produktu</td>
+                    <td>@item.Data_Od.ToString("yyyy-MM-dd")</td>
+                    <td>@item.Data_Do.ToString("yyyy-MM-dd")</td>
+                    <td>@item.Liczba_Jednostek_Roz</td>
+                    <td>@item.Wartosc_Jednostki</td>
+                    <td>@item.Wartosc</td>
+                    <td>@item.Miejsce</td>
+                    <td> <a asp-controller="AdminPanel" asp-action="Edit" asp-route-id="@item.Id"><button class="btn btn-block btn-primary">Edytuj</button></a></td>
+                    <td> <a asp-controller="Pretriage" asp-action="Delete" asp-route-id="@item.Id"><button class="btn btn-block btn-danger">Usuń</button></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>

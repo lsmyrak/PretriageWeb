@@ -1,0 +1,59 @@
+﻿@model PretriageWeb.ViewModel.ConfigListViewModel
+
+<h3>Konfiguracja Produktu :</h3>
+<a asp-action="AddProd"><button class="btn btn-block btn-primary">Dodaj nową konfigurację</button></a>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Kod Produktu</th>
+            <th scope="col">Nazwa Produktu</th>
+            <th scope="col">Liczba Jednostek Rozliczeniowych</th>
+            <th scope="col">Wartość jednostki rozliczeniowej</th>
+            <th scope="col">Status</th>
+            <th scope="col">Edycja</th>
+            <th scope="col">Usuwanie</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.ConfigLists)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Kod_Produktu</td>
+                <td>@item.Nazwa_Produktu</td>
+                <td>@item.Liczba_Jednostek_Roz</td>
+                <td>@item.Wartosc_Jednostki</td>
+                <td> <a asp-controller="Config" asp-action="ChangeStatusProd" asp-route-id="@item.Id">@item.Status</a></td>
+                <td> <a asp-controller="Config" asp-action="EditProd" asp-route-id="@item.Id">Edytuj</a></td>
+                <td> <a asp-controller="Config" asp-action="DeleteProd" asp-route-id="@item.Id">Usuń</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Konfiguracja Miejsc :</h3>
+<a asp-action="AddPlace"><button class="btn btn-block btn-primary">Dodaj nowe miejsce</button></a>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nazwa mmiejsca</th>            
+            <th scope="col">Status</th>
+            <th scope="col">Edycja</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.UnitsList)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Name</td>                
+                <td> <a asp-controller="Config" asp-action="EditPlace" asp-route-id="@item.Id">Edytuj</a></td>
+                <td> <a asp-controller="Config" asp-action="DeletePlace" asp-route-id="@item.Id">Usuń</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+﻿@model PretriageWeb.ViewModel.NewConfigViewModel
+
+<form asp-action="Add" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label asp-for="Opis" class="control-label">Opis</label>
+        <input  type="text" asp-for="Opis" class="form-control" />
+        <span asp-validation-for="Opis" class="text-danger"></span>
+
+        <label asp-for="Kod_Produktu">Data Od : </label>
+        <input  type="text" asp-for="Kod_Produktu" class="form-control" />
+        <span asp-validation-for="Kod_Produktu" class="text-danger"></span>
+
+        <label asp-for="Nazwa_Produktu">Nazwa_Produktu </label>
+        <input  type="text" asp-for="Nazwa_Produktu" class="form-control" />
+        <span asp-validation-for="Nazwa_Produktu" class="text-danger"></span>
+
+        <label asp-for="Liczba_Jednostek_Roz">Liczba_Jednostek_Roz </label>
+        <input type="text" asp-for="Liczba_Jednostek_Roz" class="form-control" />
+        <span asp-validation-for="Liczba_Jednostek_Roz" class="text-danger"></span>
+
+        <label asp-for="Wartosc_Jednostki">Wartosc_Jednostki </label>
+        <input type="text" asp-for="Wartosc_Jednostki" class="form-control" />
+        <span asp-validation-for="Wartosc_Jednostki" class="text-danger"></span>
+
+    </div>
+    <button class="btn btn-block btn-primary" type="submit">Dodaj</button>
+
+</form>

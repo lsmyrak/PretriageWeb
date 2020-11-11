@@ -1,0 +1,64 @@
+﻿@model Pretriage.ViewModel.PretriageListViewModel
+
+<div class="form-grup">
+    <label>
+        Data Od:
+        <input type="date" name="DataOd" id="DataOd" class="form-control" />
+    </label>
+</div>
+
+<div class="form-grup">
+    <label>
+        Data Do :
+        <input type="date" name="DataDo" id="DataDo" class="form-control" />
+    </label>
+</div>
+<div class="form-grup">
+    <label>
+        Pesel lub numer dokumentu:
+        <input type="text" name="NumberSeriaPesel" id="NumberSeriaPesel" class="form-control" />
+    </label>
+</div>
+<div class="input-group-btn">
+    <input type="submit" value="Szukaj" class="btn btn-primary" /><br>
+</div>
+
+<a class="nav-link text-dark" asp-action="SaveFile"><button class="btn btn-block btn-primary">Zapisz Wynik Do Excela</button></a>
+<table class="table table-hover">
+    <thead>
+        <tr>
+
+            <th scope="col">Pesel</th>
+            <th scope="col">Inny Dokument Tosamości</th>
+            <th scope="col">Numer lub Seria</th>
+            <th scope="col">Kod Produktu</th>
+            <th scope="col">Nazwa Produktu</th>
+            <th scope="col">Data Od</th>
+            <th scope="col">Data Do</th>
+            <th scope="col">Liczba Jednostek Rozliczeniowych</th>
+            <th scope="col">Wartość jednostki rozliczeniowej</th>
+            <th scope="col">Wartość</th>
+            <th scope="col">Miejsce</th>
+       
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PretriageLists)
+        {
+            <tr>
+                <td>@item.Pesel</td>
+                <td>@item.InnyDokument</td>
+                <td>@item.NumerSeria</td>
+                <td>@item.Kod_Produktu</td>
+                <td>@item.Nazwa_Produktu</td>
+                <td>@item.Data_Od.ToString("yyyy-MM-dd")</td>
+                <td>@item.Data_Do.ToString("yyyy-MM-dd")</td>
+                <td>@item.Liczba_Jednostek_Roz</td>
+                <td>@item.Wartosc_Jednostki</td>
+                <td>@item.Wartosc</td>
+                <td>@item.Miejsce</td>
+              
+            </tr>
+        }
+    </tbody>
+</table>

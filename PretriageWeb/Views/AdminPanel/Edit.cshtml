@@ -1,0 +1,91 @@
+﻿@model Pretriage.ViewModel.EditPretiageViewModel
+
+<form asp-action="Edit" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label asp-for="Pesel" class="control-label">Pesel</label>
+        <input asp-for="Pesel" class="form-control" />
+        <span asp-validation-for="Pesel" class="text-danger"></span>
+
+        <label asp-for="Data_Od">Data Od : </label>
+        <input asp-for="Data_Od" type="date" class="form-control" />
+        <span asp-validation-for="Data_Od" class="text-danger"></span>
+
+        <label asp-for="Data_Do">Data Do : </label>
+        <input asp-for="Data_Do" type="date" class="form-control" />
+        <span asp-validation-for="Data_Do" class="text-danger"></span>
+
+        <label asp-for="InnyDokument">Inny Dokument Tozsamości : </label>
+        <input asp-for="InnyDokument" type="text" class="form-control" />
+        <span asp-validation-for="InnyDokument" class="text-danger"></span>
+
+        <label asp-for="NumerSeria">Numer Dokumentu: </label>
+        <input asp-for="NumerSeria" type="text" class="form-control" />
+        <span asp-validation-for="NumerSeria" class="text-danger"></span>
+
+
+
+
+        <label asp-for="Kod_Produktu" class="control-label">Kod Produktu</label>
+        <input asp-for="Kod_Produktu" class="form-control" />
+        <span asp-validation-for="Kod_Produktu" class="text-danger"></span>
+
+        <label asp-for="Nazwa_Produktu">Nazwa Produktu : </label>
+        <input asp-for="Nazwa_Produktu" type="date" class="form-control" />
+        <span asp-validation-for="Nazwa_Produktu" class="text-danger"></span>
+
+        <label asp-for="Liczba_Jednostek_Roz">Liczba Jednostek_Roz : </label>
+        <input asp-for="Liczba_Jednostek_Roz" type="text" class="form-control" />
+        <span asp-validation-for="Liczba_Jednostek_Roz" class="text-danger"></span>
+
+        <label asp-for="Wartosc_Jednostki">Wartosc jednostki: </label>
+        <input asp-for="Wartosc_Jednostki" type="text" class="form-control" />
+        <span asp-validation-for="Wartosc_Jednostki" class="text-danger"></span>
+
+        <label asp-for="Wartosc">Wartosc </label>
+        <input asp-for="Wartosc" type="text" class="form-control" />
+        <span asp-validation-for="Wartosc" class="text-danger"></span>
+
+
+
+    </div>
+    <br>
+
+    @*Radiobuttons*@
+
+    <div class="btn-group-vertical" data-toggle="buttons">
+        <span asp-validation-for="Miejsce" class="text-danger"></span>
+        <label class="btn btn-primary">
+            <input type="radio" name="Miejsce" value="Podstawowa Opieka Zdrowotna Dorosłych, Dzieci Zdrowych i Chorych" />Podstawowa Opieka Zdrowotna Dorosłych, Dzieci Zdrowych i Chorych
+        </label>
+
+        <label class="btn btn-primary">
+            <input type="radio" name="Miejsce" value="Poradnia Ginekologiczno-Położnicza">Poradnia Ginekologiczno-Położnicza
+        </label>
+
+        <label class="btn btn-primary">
+            <input type="radio" name="Miejsce" value="Poradnia Chirurgii Ogólnej">Poradnia Chirurgii Ogólnej
+        </label>
+
+        <label class="btn btn-primary">
+            <input type="radio" name="Miejsce" value="Poradnia Anestezjologiczna">Poradnia Anestezjologiczna
+        </label>
+
+        <label class="btn btn-primary">
+            <input type="radio" name="Miejsce" value="Poradnia Urazowo-Ortopedyczna Dorosłych i Dzieci" />Poradnia Urazowo-Ortopedyczna Dorosłych i Dzieci
+        </label>
+
+        <label class="btn btn-primary">
+            <input type="radio" name="Miejsce" value="Poradnia Neurologiczna">Poradnia Neurologiczna
+        </label>
+
+        <label class="btn btn-primary">
+            <input type="radio" name="Miejsce" value="Poradnia Okulistyczna" />Poradnia Okulistyczna
+        </label>
+
+        <label class="btn btn-primary">
+            <input type="radio" name="Miejsce" value="Poradnia Nocnej i Świątecznej Opieki Zdrowotnej" />Poradnia Nocnej i Świątecznej Opieki Zdrowotnej
+        </label>
+    </div>
+    <button class="btn btn-block btn-primary" type="submit">Zapisz</button>
+
+</form>

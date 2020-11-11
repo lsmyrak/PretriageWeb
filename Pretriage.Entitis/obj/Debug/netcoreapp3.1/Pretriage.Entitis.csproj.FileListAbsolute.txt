@@ -1,0 +1,17 @@
+C:\Dev\Project\.NET\PretriageWeb\Pretriage.Entitis\bin\Debug\netcoreapp3.1\Pretriage.Entitis.deps.json
+C:\Dev\Project\.NET\PretriageWeb\Pretriage.Entitis\bin\Debug\netcoreapp3.1\Pretriage.Entitis.dll
+C:\Dev\Project\.NET\PretriageWeb\Pretriage.Entitis\bin\Debug\netcoreapp3.1\Pretriage.Entitis.pdb
+C:\Dev\Project\.NET\PretriageWeb\Pretriage.Entitis\obj\Debug\netcoreapp3.1\Pretriage.Entitis.csprojAssemblyReference.cache
+C:\Dev\Project\.NET\PretriageWeb\Pretriage.Entitis\obj\Debug\netcoreapp3.1\Pretriage.Entitis.AssemblyInfoInputs.cache
+C:\Dev\Project\.NET\PretriageWeb\Pretriage.Entitis\obj\Debug\netcoreapp3.1\Pretriage.Entitis.AssemblyInfo.cs
+C:\Dev\Project\.NET\PretriageWeb\Pretriage.Entitis\obj\Debug\netcoreapp3.1\Pretriage.Entitis.csproj.CoreCompileInputs.cache
+C:\Dev\Project\.NET\PretriageWeb\Pretriage.Entitis\obj\Debug\netcoreapp3.1\Pretriage.Entitis.dll
+C:\Dev\Project\.NET\PretriageWeb\Pretriage.Entitis\obj\Debug\netcoreapp3.1\Pretriage.Entitis.pdb
+C:\Users\Miro\source\repos\PretriageWeb\Pretriage.Entitis\bin\Debug\netcoreapp3.1\Pretriage.Entitis.deps.json
+C:\Users\Miro\source\repos\PretriageWeb\Pretriage.Entitis\bin\Debug\netcoreapp3.1\Pretriage.Entitis.dll
+C:\Users\Miro\source\repos\PretriageWeb\Pretriage.Entitis\bin\Debug\netcoreapp3.1\Pretriage.Entitis.pdb
+C:\Users\Miro\source\repos\PretriageWeb\Pretriage.Entitis\obj\Debug\netcoreapp3.1\Pretriage.Entitis.AssemblyInfoInputs.cache
+C:\Users\Miro\source\repos\PretriageWeb\Pretriage.Entitis\obj\Debug\netcoreapp3.1\Pretriage.Entitis.AssemblyInfo.cs
+C:\Users\Miro\source\repos\PretriageWeb\Pretriage.Entitis\obj\Debug\netcoreapp3.1\Pretriage.Entitis.csproj.CoreCompileInputs.cache
+C:\Users\Miro\source\repos\PretriageWeb\Pretriage.Entitis\obj\Debug\netcoreapp3.1\Pretriage.Entitis.dll
+C:\Users\Miro\source\repos\PretriageWeb\Pretriage.Entitis\obj\Debug\netcoreapp3.1\Pretriage.Entitis.pdb

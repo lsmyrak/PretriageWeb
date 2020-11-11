@@ -1,0 +1,41 @@
+﻿@model Pretriage.ViewModel.NewPretiageViewModel;
+
+<form asp-action="Add" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label asp-for="Pesel" class="control-label">Pesel</label>
+        <input asp-for="Pesel" class="form-control" />
+        <span asp-validation-for="Pesel" class="text-danger"></span>
+
+        <label asp-for="DataOd">Data Od : </label>
+        <input asp-for="DataOd" type="date" class="form-control" />
+        <span asp-validation-for="DataOd" class="text-danger"></span>
+
+        <label asp-for="DataDo">Data Do : </label>
+        <input asp-for="DataDo" type="date" class="form-control" />
+        <span asp-validation-for="DataDo" class="text-danger"></span>
+
+        <label asp-for="InnyDokument">Inny Dokument Tozsamości : </label>
+        <input asp-for="InnyDokument" type="text" class="form-control" />
+        <span asp-validation-for="InnyDokument" class="text-danger"></span>
+
+        <label asp-for="NumerSeria">Numer Seria : </label>
+        <input asp-for="NumerSeria" type="text" class="form-control" />
+        <span asp-validation-for="NumerSeria" class="text-danger"></span>
+        <br>
+
+        <div class="btn-group-vertical" data-toggle="buttons">
+            <span asp-validation-for="Miejsce" class="text-danger"></span>
+            <span asp-validation-for="UnitsList" class="text-danger"></span>
+            @foreach (var item in Model.UnitsList)
+            {
+                <label class="btn btn-primary">
+                    <input type="radio" name="Miejsce" value="@item.Name" />@item.Name
+                </label>
+            }
+
+
+        </div>
+    </div>
+    <button class="btn btn-block btn-primary" type="submit">Dodaj</button>
+
+</form>

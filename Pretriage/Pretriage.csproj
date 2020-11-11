@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.0.0" />
+    <PackageReference Include="ClosedXML" Version="0.95.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pretriage.AccessData\Pretriage.AccessData.csproj" />
+  </ItemGroup>
+
+</Project>
